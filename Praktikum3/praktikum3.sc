@@ -101,7 +101,6 @@ val list_jackson = parseFile(token_jackson, Nil)
  */
 def map[A](input_list: List[A], func:A => A): List[A] = input_list match {
   case Nil => Nil
-<<<<<<< HEAD
   case y::ys => func(y) :: map(ys, func)
 }
 
@@ -147,15 +146,6 @@ listAlbumToUpper(list_alben)
  * @tparam B
  * @return List[B]
  */
-=======
-  case y::ys => func(y) :: map(ys,func)
-}
-
-def tracksToUpper(tra: Track): Track = tra.copy(title = tra.title.toUpperCase())
-
-def allTitleToUpper(alb: Album): Album = alb.copy(title = alb.title.toUpperCase(), tracks = map(alb.tracks, tracksToUpper))
-
->>>>>>> b1e846f2b8b342b09aa37601fd5e59abe585d325
 def poly_map[A,B](input_list: List[A], func:A => B): List[B] = input_list match {
   case Nil => Nil
   case y::ys => func(y) :: poly_map(ys, func)
@@ -220,6 +210,13 @@ val jackson_tracks = getTracksFromAlb(list_jackson)
 
 tracksHigherFour(jackson_tracks)
 
+/**
+ * Nimmt eine Liste von Alben entgegen und Liefert eine Liste von Strings, in der
+ * alle Titel von Rod Temperton gelistet sind
+ *
+ * @param album
+ * @return List[String]
+ */
 def tracksFromRod(album: List[Album]): List[String] = {
   poly_map[Album,String](album, filter[])
 }
