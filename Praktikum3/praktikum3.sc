@@ -218,8 +218,10 @@ tracksHigherFour(jackson_tracks)
  * @return List[String]
  */
 def tracksFromRod(album: List[Album]): List[String] = {
-  poly_map[Album,String](album, filter[])
+  //poly_map[Album,String](album, filter[])
+  Nil
 }
+
 
 
 

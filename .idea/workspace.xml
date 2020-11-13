@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6a595c07-b9fc-4270-82f4-4db551a6704b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Praktikum3/praktikum3.sc" beforeDir="false" afterPath="$PROJECT_DIR$/Praktikum3/praktikum3.sc" afterDir="false" />
-    </list>
+    <list default="true" id="6a595c07-b9fc-4270-82f4-4db551a6704b" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,6 +28,9 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -51,6 +50,7 @@
       <workItem from="1605032141679" duration="115000" />
       <workItem from="1605032282575" duration="970000" />
       <workItem from="1605033390607" duration="443000" />
+      <workItem from="1605266023282" duration="413000" />
     </task>
     <servers />
   </component>
@@ -72,16 +72,17 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="808" y="410" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1603957407658" />
-    <state x="739" y="262" key="FileChooserDialogImpl" timestamp="1604403471159">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="526" y="214" width="424" height="491" key="FileChooserDialogImpl" timestamp="1605266410427">
+      <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="739" y="262" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604403471159" />
     <state x="2659" y="262" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1603104630817" />
-    <state x="328" y="31" width="1022" height="737" key="SettingsEditor" timestamp="1605032258220">
+    <state x="526" y="214" width="424" height="491" key="FileChooserDialogImpl/0.27.1366.741@0.27.1366.741" timestamp="1605266410427" />
+    <state x="328" y="31" width="1022" height="737" key="SettingsEditor" timestamp="1605266435854">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="2381" y="163" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1603104576076" />
-    <state x="328" y="31" width="1022" height="737" key="SettingsEditor/0.27.1366.741@0.27.1366.741" timestamp="1605032258220" />
+    <state x="328" y="31" width="1022" height="737" key="SettingsEditor/0.27.1366.741@0.27.1366.741" timestamp="1605266435854" />
     <state x="2262" y="141" key="new project wizard" timestamp="1603104635107">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
