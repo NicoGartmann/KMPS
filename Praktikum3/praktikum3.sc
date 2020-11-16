@@ -1,3 +1,4 @@
+import scala.::
 import scala.io.Source
 
 case class Track(title: String, length: String, rating:Int, features: List[String], writers: List[String]) {
@@ -11,8 +12,8 @@ case class Album(title: String, date: String, artist:String, tracks: List[Track]
   }
 }
 
-val file_content:List[Char] = Source.fromFile("D:/Uni-Projekte/KMPS/Praktika/Praktikum3/alben.xml").toList
-val jackson_content:List[Char] = Source.fromFile("D:/Uni-Projekte/KMPS/Praktika/Praktikum3/jackson.xml").toList
+val file_content:List[Char] = Source.fromFile("IdeaProjects/test/src/alben.xml").toList
+val jackson_content:List[Char] = Source.fromFile("IdeaProjects/test/src/jackson.xml").toList
 
 def createTokenList(file_content: List[Char], tokenList: List[String], token:String) : List[String] = token match
 {
@@ -94,8 +95,8 @@ val list_jackson = parseFile(token_jackson, Nil)
  *
  * Aufgabe 1a
  *
- * @param input_list
- * @param func
+ * @param input_list List[A]
+ * @param func A => A
  * @tparam A
  * @return List[A]
  */
@@ -114,7 +115,7 @@ def map[A](input_list: List[A], func:A => A): List[A] = input_list match {
  * @return
  */
 def albenToUpper(alben: List[Album]): List[Album] =
-  map[Album](alben, Alben => Alben.copy(title = Alben.title.toUpperCase()))
+  map[Album](alben, alben => alben.copy(title = alben.title.toUpperCase()))
 
 albenToUpper(list_alben)
 
@@ -129,8 +130,8 @@ albenToUpper(list_alben)
  * @return List[Album]
  */
 def listAlbumToUpper(alben: List[Album]): List[Album]
-  = map[Album](alben, Album => Album.copy(title = Album.title.toUpperCase(),
-  tracks = map[Track](Album.tracks, Track => Track.copy(Track.title.toUpperCase()))))
+  = map[Album](alben, alben => alben.copy(title = alben.title.toUpperCase(),
+  tracks = map[Track](alben.tracks, Track => Track.copy(Track.title.toUpperCase()))))
 
 listAlbumToUpper(list_alben)
 
@@ -167,13 +168,13 @@ def albTrackList(input_list: List[Album]): List[List[String]]
 albTrackList(list_alben)
 
 /**
- * nimmt eine Liste vom Typ A entgeben und gibt eine Liste vom Typ A zurueck,
+ * Nimmt eine Liste vom Typ A entgeben und gibt eine Liste vom Typ A zurueck,
  * bei der die condition zutrifft
  *
  * Aufgabe 2a
  *
- * @param input_list
- * @param condition
+ * @param input_list List[A]
+ * @param condition A => Boolean
  * @return List[A]
  */
 def filter[A](input_list: List[A], condition:A => Boolean): List[A] = input_list match {
@@ -201,26 +202,71 @@ def tracksHigherFour(tracks: List[Track]): List[Track]
  * @param album
  * @return List[Track]
  */
-def getTracksFromAlb(album: List[Album]): List[Track] = album match {
-  case Nil => Nil
-  case x::xs => x.tracks
+def getTracksFromAlb(album: List[Album]): List[Track] = {
+  def getTrack(album: Album): List[Track] = {
+    album.tracks
+  }
+  album match {
+    case Nil => Nil
+    case x::xs => getTrack(x) ::: getTracksFromAlb(xs)
+  }
 }
 
-val jackson_tracks = getTracksFromAlb(list_jackson)
-
-tracksHigherFour(jackson_tracks)
+tracksHigherFour(getTracksFromAlb(list_jackson))
 
 /**
  * Nimmt eine Liste von Alben entgegen und Liefert eine Liste von Strings, in der
  * alle Titel von Rod Temperton gelistet sind
  *
- * @param album
+ * Aufgabe 2c
+ *
+ * @param alben
  * @return List[String]
  */
-def tracksFromRod(album: List[Album]): List[String] = {
-  //poly_map[Album,String](album, filter[])
+def tracksFromRod(alben: List[Album]): List[String] = {
+  def getTracks(album: Album): List[Track] = {
+    album.tracks
+  }
+  alben match {
+    case Nil => Nil
+    case x :: xs => getTracks(x)
+  }
   Nil
 }
+
+def ListofRodyTitles(album : List[Album]) : List[String] = {
+  def byRody(album : List[Album]) : List[Track] = {
+    def sort(track : Track) : Boolean = {
+      def check(writer : List[String]) : Boolean = writer match {
+        case Nil => false
+        case x::xs => if(x == "Rod Temperton") true else check(xs)
+      }
+      check(track.writers)
+    }
+    album match {
+      case Nil => Nil
+      case x::xs => filter[Track](x.tracks, sort)
+    }
+  }
+  poly_map[Track,String](byRody(album), Track => Track.title)
+}
+
+ListofRodyTitles(list_jackson)
+
+poly_map[String, List[String]]("a"::"b"::"c"::Nil, (_ => ("a"::"b"::Nil)))
+
+
+def partition[A](input_list: List[A], condition: A => Boolean): List[List[A]] = input_list match {
+  case Nil => Nil
+  case x :: xs =>
+    if(condition(x)) {
+      poly_map[A,List[A]](input_list, A => A :: partition(xs, condition))
+    } else {
+      partition(xs, condition)
+    }
+
+}
+
 
 
 
