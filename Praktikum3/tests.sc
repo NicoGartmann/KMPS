@@ -22,12 +22,14 @@ def filter[A](input_list: List[A], condition:A => Boolean): List[A] = input_list
 }
 
 def test[A](input_list: List[A], condition: A => Boolean, output_list: List[List[A]], tmp: List[A]): List[List[A]] = input_list match {
-  case Nil => output_list
+  case Nil => output_list :+ tmp
   case x :: xs => {
     if(condition(x)) test(xs, condition, output_list, tmp :+ x)
     else test(xs, condition, output_list :+ tmp, Nil)
   }
 }
+
+
 
 test[Int](1::2::3::4::5::6::7::Nil, x => x != 4, Nil, Nil)
 

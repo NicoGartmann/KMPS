@@ -12,8 +12,16 @@ case class Album(title: String, date: String, artist:String, tracks: List[Track]
   }
 }
 
+//Linux-Pfad (fuer Laptop)
+/*
 val file_content:List[Char] = Source.fromFile("IdeaProjects/test/src/alben.xml").toList
 val jackson_content:List[Char] = Source.fromFile("IdeaProjects/test/src/jackson.xml").toList
+ */
+
+//Windows-Pfad (fuer PC)
+
+val file_content:List[Char] = Source.fromFile("D:/Uni-Projekte/KMPS/Praktika/Praktikum3/alben.xml").toList
+val jackson_content:List[Char] = Source.fromFile("D:/Uni-Projekte/KMPS/Praktika/Praktikum3/jackson.xml").toList
 
 def createTokenList(file_content: List[Char], tokenList: List[String], token:String) : List[String] = token match
 {
@@ -253,22 +261,110 @@ def ListofRodyTitles(album : List[Album]) : List[String] = {
 
 ListofRodyTitles(list_jackson)
 
-poly_map[String, List[String]]("a"::"b"::"c"::Nil, (_ => ("a"::"b"::Nil)))
-
-
-def partition[A](input_list: List[A], condition: A => Boolean): List[List[A]] = input_list match {
-  case Nil => Nil
-  case x :: xs =>
-    if(condition(x)) {
-      poly_map[A,List[A]](input_list, A => A :: partition(xs, condition))
-    } else {
-      partition(xs, condition)
+/**
+ * Nimmt eine Liste entgegen und splittet diese in Teil-Listen, wenn ein Element erreicht ist, bei dem
+ * condition false zurueckgibt
+ *
+ * Aufgabe 3a
+ *
+ * @param input_list
+ * @param condition
+ * @tparam A
+ * @return List[List[A]]
+ */
+def partition[A](input_list: List[A], condition: A => Boolean): List[List[A]] = {
+  def hilf[A](input_list: List[A], condition: A => Boolean, output_list: List[List[A]], inner_list: List[A]): List[List[A]] = input_list match {
+    case Nil => output_list :+ inner_list
+    case x :: xs => {
+      if(!condition(x)) hilf(xs, condition, output_list, inner_list :+ x)
+      else hilf(xs, condition, output_list :+ inner_list, Nil)
     }
+  }
+  hilf[A](input_list, condition, Nil, Nil)
+}
 
+partition[Char]('a'::'b'::'c'::'D'::'e'::'f'::'G'::'H'::'i'::'J'::Nil, x => x.isUpper)
+
+
+/**
+ * Nimmt eine Liste von Char entgegen und erzeugt eine Token-Liste
+ *
+ * Aufgabe 3c
+ *
+ * @param input_list
+ * @return List[String]
+ */
+def createTokenListb(input_list : List[Char]) : List[String] = {
+  def isBlank(s: String): Boolean = s.trim.isEmpty
+  def isTag(c: Char): Boolean = { c == '>' || c == '<' }
+  filter[String](poly_map[List[Char],String](partition[Char](input_list, isTag), x => x.mkString), y => !isBlank(y))
+}
+
+createTokenListb(jackson_content)
+
+/**
+ * Nimmt einen Startwert von und eine Endwert bis entgegen und wendet auf alle
+ * Elemente in diesen Bereich die Funktion func an
+ *
+ * Aufgabe 4a
+ *
+ * @param func
+ * @param von
+ * @param bis
+ * @return Int
+ */
+def sumProd(func: (Int, Int) => Int, von: Int, bis: Int): Int = {
+  if(von > bis) 0 else func(von, sumProd(func, von + 1, bis))
+}
+
+sumProd((x,y) => x + y, 1, 5)
+
+
+/**
+ * Verknuepft für alle nichtleeren Integer-Listen mittels Funktion func alle Listenelemente
+ * von links nach rechts
+ *
+ * Hilfsfunktion
+ *
+ * @param f
+ * @param start
+ * @param xs
+ * @return Int
+ */
+def foldL(f:(Int, Int) => Int, start: Int, xs: List[Int]): Int = xs match {
+  case x :: Nil => f(start, x)
+  case h :: hs => foldL(f, f(start,h), hs)
 }
 
 
+/**
+ * Erzeugt eine Liste von Integern zwischen a und b
+ *
+ * Hilfsfunktion
+ *
+ * @param a
+ * @param b
+ * @return List[Int]
+ */
+def range(a: Int, b: Int): List[Int] = {
+  if(a > b) Nil else a::range(a + 1, b)
+}
 
+/**
+ * Funktionsweise wie sumProd
+ *
+ * Aufgabe 4d
+ *
+ * @param func
+ * @param von
+ * @param bis
+ * @return Int
+ */
+def sumProd2(func: (Int, Int) => Int, von: Int, bis: Int): Int = {
+  foldL(func, 0, range(von, bis))
+}
+
+sumProd2((x,y) => x + y, 1, 5)
 
 
 
