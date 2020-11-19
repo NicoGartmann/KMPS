@@ -110,7 +110,7 @@ val list_jackson = parseFile(token_jackson, Nil)
  */
 def map[A](input_list: List[A], func:A => A): List[A] = input_list match {
   case Nil => Nil
-  case y::ys => func(y) :: map(ys, func)
+  case y :: ys => func(y) :: map(ys, func)
 }
 
 /**
@@ -157,7 +157,7 @@ listAlbumToUpper(list_alben)
  */
 def poly_map[A,B](input_list: List[A], func:A => B): List[B] = input_list match {
   case Nil => Nil
-  case y::ys => func(y) :: poly_map(ys, func)
+  case y :: ys => func(y) :: poly_map(ys, func)
 }
 
 /**
@@ -187,7 +187,7 @@ albTrackList(list_alben)
  */
 def filter[A](input_list: List[A], condition:A => Boolean): List[A] = input_list match {
   case Nil => input_list
-  case x::xs => if(condition(x)) x::filter(xs, condition) else filter(xs, condition)
+  case x :: xs => if(condition(x)) x :: filter(xs, condition) else filter(xs, condition)
 }
 
 /**
@@ -211,12 +211,12 @@ def tracksHigherFour(tracks: List[Track]): List[Track]
  * @return List[Track]
  */
 def getTracksFromAlb(album: List[Album]): List[Track] = {
-  def getTrack(album: Album): List[Track] = {
+  def getTracks(album: Album): List[Track] = {
     album.tracks
   }
   album match {
     case Nil => Nil
-    case x::xs => getTrack(x) ::: getTracksFromAlb(xs)
+    case x :: xs => getTracks(x) ::: getTracksFromAlb(xs)
   }
 }
 
@@ -228,20 +228,9 @@ tracksHigherFour(getTracksFromAlb(list_jackson))
  *
  * Aufgabe 2c
  *
- * @param alben
+ * @param album
  * @return List[String]
  */
-def tracksFromRod(alben: List[Album]): List[String] = {
-  def getTracks(album: Album): List[Track] = {
-    album.tracks
-  }
-  alben match {
-    case Nil => Nil
-    case x :: xs => getTracks(x)
-  }
-  Nil
-}
-
 def ListofRodyTitles(album : List[Album]) : List[String] = {
   def byRody(album : List[Album]) : List[Track] = {
     def sort(track : Track) : Boolean = {
@@ -297,7 +286,7 @@ partition[Char]('a'::'b'::'c'::'D'::'e'::'f'::'G'::'H'::'i'::'J'::Nil, x => x.is
 def createTokenListb(input_list : List[Char]) : List[String] = {
   def isBlank(s: String): Boolean = s.trim.isEmpty
   def isTag(c: Char): Boolean = { c == '>' || c == '<' }
-  filter[String](poly_map[List[Char],String](partition[Char](input_list, isTag), x => x.mkString), y => !isBlank(y))
+    filter[String](poly_map[List[Char],String](partition[Char](input_list, isTag), x => x.mkString), y => !isBlank(y))
 }
 
 createTokenListb(jackson_content)
@@ -309,16 +298,18 @@ createTokenListb(jackson_content)
  * Aufgabe 4a
  *
  * @param func
+ * @param operation
  * @param von
  * @param bis
  * @return Int
  */
-def sumProd(func: (Int, Int) => Int, von: Int, bis: Int): Int = {
-  if(von > bis) 0 else func(von, sumProd(func, von + 1, bis))
+def sumProd(func: Int => Int, operation:(Int, Int) => Int, von: Int, bis: Int): Int = {
+  if(von > bis) 0 else operation(func(von), sumProd(func, operation, von + 1, bis))
 }
 
-sumProd((x,y) => x + y, 1, 5)
-
+sumProd(x => x, (x,y) => x + y, 1, 5)
+sumProd(x => x * x, (x,y) => x + y, 1, 5)
+sumProd(x => x, (x, y) => x - y, 1, 5)
 
 /**
  * Verknuepft für alle nichtleeren Integer-Listen mittels Funktion func alle Listenelemente
@@ -351,20 +342,23 @@ def range(a: Int, b: Int): List[Int] = {
 }
 
 /**
- * Funktionsweise wie sumProd
+ * Nimmt einen Startwert von und eine Endwert bis entgegen und wendet auf alle
+ * Elemente in diesen Bereich die Funktion func an
  *
  * Aufgabe 4d
  *
  * @param func
+ * @param operation
  * @param von
  * @param bis
  * @return Int
  */
-def sumProd2(func: (Int, Int) => Int, von: Int, bis: Int): Int = {
-  foldL(func, 0, range(von, bis))
+def sumProd3(func: Int => Int, operation: (Int, Int) => Int, von: Int, bis: Int): Int = {
+  foldL(operation, 0,map[Int](range(von, bis), x => func(x)))
 }
 
-sumProd2((x,y) => x + y, 1, 5)
-
+sumProd3(x => x, (x,y) => x + y, 1, 5)
+sumProd3(x => x * x,(x,y) => x + y, 1, 5)
+sumProd3(x => x, (x,y) => x - y, 1, 5)
 
 
