@@ -1,30 +1,28 @@
 package main
 
 import (
-	"github.com/visualfc/atk/tk"
+	"fmt"
+	"time"
+
+	"fyne.io/fyne/app"
+	"fyne.io/fyne/widget"
 )
 
-type Window struct {
-	*tk.Window
-}
-
-func NewWindow() *Window {
-	mw := &Window{tk.RootWindow()}
-	lbl := tk.NewLabel(mw, "Hello ATK")
-	btn := tk.NewButton(mw, "Quit")
-	btn.OnCommand(func() {
-		tk.Quit()
-	})
-	tk.NewVPackLayout(mw).AddWidgets(lbl, tk.NewLayoutSpacer(mw, 0, true), btn)
-	mw.ResizeN(300, 200)
-	return mw
+func calc() int {
+	time.Sleep(10 * time.Second)
+	return 42
 }
 
 func main() {
-	tk.MainLoop(func() {
-		mw := NewWindow()
-		mw.SetTitle("ATK Sample")
-		mw.Center()
-		mw.ShowNormal()
+	app := app.New()
+
+	w := app.NewWindow("Non Responsive")
+
+	content := widget.NewButton("calc", func() {
+		fmt.Println("Button gedrueckt")
+		fmt.Println(calc())
 	})
+
+	w.SetContent(content)
+	w.ShowAndRun()
 }
