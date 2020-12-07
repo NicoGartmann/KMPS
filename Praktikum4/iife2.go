@@ -11,7 +11,7 @@ func start_goroutine() {
 	go func(dp int) {
 		fmt.Println("Now sleeping for", dp, "seconds ...")
 		time.Sleep(time.Duration(d) * time.Second)
-		fmt.Println("Goroutine ends after ", d, "seconds.")
+		fmt.Println("Goroutine ends after ", dp, "seconds.")
 	}(d)
 }
 

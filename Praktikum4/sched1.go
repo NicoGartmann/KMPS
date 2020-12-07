@@ -1,24 +1,19 @@
 package main
 
 import (
-	"fmt"
-	"runtime"
-	"time"
+	"os"
+	"runtime/trace"
 )
 
-func f(my_name string) {
-	for i := 0; i < 10; i++ {
-		fmt.Println(my_name, ": ", i)
-	}
-}
-
 func main() {
-	runtime.GOMAXPROCS(1)
-	fmt.Printf("runtime.GOMAXPROCS(0) retuned %d CPUs\n", runtime.GOMAXPROCS(0))
+	trace.Start(os.Stderr)
+	defer trace.Stop()
 
-	go f("goroutine1")
-	go f("goroutine2")
-	go f("goroutine3")
+	ch := make(chan int)
 
-	time.Sleep(10 * time.Second)
+	go func() {
+		ch <- 42
+	}()
+
+	<-ch
 }
