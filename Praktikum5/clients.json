@@ -1,0 +1,14 @@
+{
+    "client7" : {
+        "id" : 7,
+        "connected" : false
+    }, 
+    "client8" : {
+        "id" : 8,
+        "connected" : false
+    }, 
+    "client9" : {
+        "id" : 9,
+        "connected" : false
+    }
+}

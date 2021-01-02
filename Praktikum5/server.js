@@ -1,5 +1,20 @@
 const net = require('net');
 const readline = require('readline')
+const fs = require('fs')
+
+fs.readFile('./tickets.json', (err, jsonString) => {
+    if (err) {
+        console.log("File read failed:", err)
+        return
+    }
+    try {
+        const tickets = JSON.parse(jsonString); 
+        tickets.foreach(ticket => console.log(ticket)); 
+        
+    } catch(err) {
+        console.log('Error parsing JSON string:', err)
+    }
+}); 
 
 const rl = readline.createInterface({
   input: process.stdin,
