@@ -1,0 +1,56 @@
+Skript gestartet auf 2021-01-03 13:08:32+01:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="40" LINES="15"]
+]0;nico@Nico-Notebook: ~/Schreibtisch/KMPS/Praktikum5[01;32mnico@Nico-Notebook[00m:[01;34m~/Schreibtisch/KMPS/Praktikum5[00m$ node server.js
+Server gestartet
+Keine Tickets
+[1G[0Jn: neues Ticket. q: quit [26G
+
+Neuer Client: client1
+Keine Tickets
+[1G[0Jn: neues Ticket. q: quit [26G
+
+Neuer Client: client2
+Keine Tickets
+[1G[0Jn: neues Ticket. q: quit [26G
+
+[1G[0Jn: neues Ticket. q: quit [26GNeuer Client: client3
+Keine Tickets
+[1G[0Jn: neues Ticket. q: quit [26G
+
+n
+Tickets:
+ticket1 (nicht zugewiesen)
+[1G[0Jn: neues Ticket. q: quit [26G
+
+Tickets:
+ticket1 (client1)
+[1G[0Jn: neues Ticket. q: quit [26G
+
+n
+Tickets:
+ticket1 (client1)
+ticket2 (nicht zugewiesen)
+[1G[0Jn: neues Ticket. q: quit [26G
+
+Tickets:
+ticket1 (client1)
+ticket2 (client2)
+[1G[0Jn: neues Ticket. q: quit [26G
+
+n
+Tickets:
+ticket1 (client1)
+ticket2 (client2)
+ticket3 (nicht zugewiesen)
+[1G[0Jn: neues Ticket. q: quit [26G
+
+Tickets:
+ticket1 (client1)
+ticket2 (client2)
+ticket3 (client3)
+[1G[0Jn: neues Ticket. q: quit [26G
+
+q
+]0;nico@Nico-Notebook: ~/Schreibtisch/KMPS/Praktikum5[01;32mnico@Nico-Notebook[00m:[01;34m~/Schreibtisch/KMPS/Praktikum5[00m$ exit
+exit
+
+Skript beendet auf 2021-01-03 13:10:09+01:00 [COMMAND_EXIT_CODE="0"]
