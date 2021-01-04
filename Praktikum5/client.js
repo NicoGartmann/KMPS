@@ -18,7 +18,7 @@ if (ws) {
   ws.close();
 }
 
-ws = new WebSocket('ws://localhost:6969');
+ws = new WebSocket('ws://localhost:3000');
 ws.onopen = () => {
   var nameArr = Array();
   nameArr.push(name);
@@ -30,10 +30,10 @@ ws.onclose = function() {
 ws.on('message', function incoming(data) {
     tickets = JSON.parse(data);
     
-    printTickets(tickets);
+    showTickets(tickets);
 })
 
-function printTickets(data) {
+function showTickets(data) {
   
   if( data.length == 0 ) {
     console.log(`Client: ${name}`);
