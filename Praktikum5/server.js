@@ -1,6 +1,10 @@
 const WebSocket = require('ws');
 const input = require('readline');
 const socket = new WebSocket.Server({ port:3000});
+var rl = input.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
 function Ticket(id, name, zugewiesen) {
   this.id = id; 
   this.name = name, 
@@ -10,14 +14,13 @@ let tickets = new Array();
 let eingabe_string = "n: neuer Eintrag, q: Quit\n"; 
 
 
-// Server Info Output
+// Server Info
 console.log("Server gestartet.\nKeine Tickets.");
 rl.question(eingabe_string, (answer) => {
   validate(answer); 
 } );  
 
 socket.on('connection', function(ws) {
-
   ws.on('message', function incoming(data) {
     data = JSON.parse(data); 
     if(data.startsWith('client')) {
@@ -34,7 +37,6 @@ socket.on('connection', function(ws) {
       if(tickets[ticket_info[0]]) {
         tickets[ticket_info[0]].zugewiesen = ticket_info[1]; 
       }
-
       // Clients informieren
       socket.clients.forEach(function each(client) {
         client.send(JSON.stringify(tickets)); 
@@ -47,11 +49,6 @@ socket.on('connection', function(ws) {
 
   }); 
 }); 
-
-var rl = input.createInterface({
-  input: process.stdin,
-  output: process.stdout
-});
 
 function newTicket() {
   // Ticket anlegen und speichern

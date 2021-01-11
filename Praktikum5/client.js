@@ -1,6 +1,10 @@
 const WebSocket = require('ws')
 const prompt = require('prompt-sync')()
 const input = require('readline')
+var rl = input.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
 
 console.log('Client gestartet.'); 
 
@@ -36,11 +40,6 @@ socket.onmessage = function message(event) {
     })
   }
 }
-
-var rl = input.createInterface({
-  input: process.stdin,
-  output: process.stdout
-});
 
 function validate(answer) {
   if(answer == 'q') {

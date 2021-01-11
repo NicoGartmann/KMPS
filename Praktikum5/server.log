@@ -1,0 +1,56 @@
+Script started on 2021-01-11 14:18:01+01:00 [TERM="xterm-256color" TTY="/dev/tty1" COLUMNS="53" LINES="22"]
+]0;nico@DESKTOP-PCT60GU: /mnt/d/Uni-Projekte/KMPS/Praktika/Praktikum5[01;32mnico@DESKTOP-PCT60GU[00m:[01;34m/mnt/d/Uni-Projekte/KMPS/Praktika/Praktikum5[00m$ node server.js
+Server gestartet.
+Keine Tickets.
+[1G[0Jn: neuer Eintrag, q: Quit
+ [1G
+Neuer Client: client1
+Keine Tickets
+n: neuer Eintrag, q: Quit
+
+
+Neuer Client: client2
+Keine Tickets
+n: neuer Eintrag, q: Quit
+
+
+Neuer Client: client3
+Keine Tickets
+n: neuer Eintrag, q: Quit
+
+n
+
+Tickets:
+ticket0 (nicht zugewiesen)
+[1G[0Jn: neuer Eintrag, q: Quit
+ [1Gn
+
+Tickets:
+ticket0 (nicht zugewiesen)
+ticket1 (nicht zugewiesen)
+[1G[0Jn: neuer Eintrag, q: Quit
+ [1G
+Tickets:
+ticket0 (nicht zugewiesen)
+ticket1 (client2)
+n: neuer Eintrag, q: Quit
+
+
+Tickets:
+ticket0 (client3)
+ticket1 (client2)
+n: neuer Eintrag, q: Quit
+
+n
+
+Tickets:
+ticket0 (client3)
+ticket1 (client2)
+ticket2 (nicht zugewiesen)
+[1G[0Jn: neuer Eintrag, q: Quit
+ [1Gq
+
+]0;nico@DESKTOP-PCT60GU: /mnt/d/Uni-Projekte/KMPS/Praktika/Praktikum5[01;32mnico@DESKTOP-PCT60GU[00m:[01;34m/mnt/d/Uni-Projekte/KMPS/Praktika/Praktikum5[00m$ exit
+exit
+
+Script done on 2021-01-11 14:19:49+01:00 [COMMAND_EXIT_CODE="0"]
