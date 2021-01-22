@@ -6,34 +6,36 @@ import json
 
 tickets = []
 
-def server_command():
-    command = input("n: neues Ticket, q:Quit\n")
+
+## Ticket erstellen oder Server beenden 
+async def server_command():
+    command = input("\nn: new Ticket, q:Quit\n")
     if command == "n":
         ticket = { 
             "id":len(tickets),
             "name":"ticket"+str(len(tickets)),
-            "zugewiesen": "nicht zugewiesen",
+            "assigned": "not assigned",
         }
         tickets.append(ticket)
         print(tickets)
     else:
-        print("Quit")
+        quit()
 
-async def message(websocket, path):
-    msg = await websocket.recv()
-    print(f"< {msg}")
+async def message():
+    uri = 'ws://locahlhost:3000'
+    async with websockets.connect(uri) as websocket:
+        async for message in websocket:
+            print(json.dumps(json.loads(message)))
 
-    ## greeting = f"{msg}"
 
-    ## await websocket.send(greeting)
+def main() :
+    print("Server started.\nNo Tickets.")
+    asyncio.get_event_loop().run_until_complete(asyncio.wait([
+        message(),
+        server_command()
+    ]))
 
-    if msg.startswith("client"):
-        print(f"Neuer Client: {msg}")
-    else:
-        print("zuweisung")
 
-start_server = websockets.serve(message, "localhost", 3000)
-print("Server gestartet.\nKeine Tickets.")
+if __name__ == "__main__":
+    main()
 
-asyncio.get_event_loop().run_until_complete(start_server)
-asyncio.get_event_loop().run_forever()

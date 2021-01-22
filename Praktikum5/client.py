@@ -4,6 +4,7 @@
 
 import asyncio
 import websockets
+import json
 
 async def connect():
     uri = "ws://localhost:3000"
@@ -11,10 +12,14 @@ async def connect():
         name = input("Client gestartet.\nBitte Client-ID eingeben: ")
 
         await websocket.send(name)
-        print(f"Client: {name}")
+        print(f"\nClient: {name}")
 
         tickets = await websocket.recv()
-        print(f" {tickets}")
+        if len(tickets)>0:
+            for ticket in tickets:
+                print(json.dumps(ticket))
+        else: 
+            print("Keine Tickets")
 
 
 asyncio.get_event_loop().run_until_complete(connect())
