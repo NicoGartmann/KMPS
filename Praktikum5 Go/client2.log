@@ -1,0 +1,216 @@
+Script started on 2021-01-24 11:14:17+01:00 [TERM="xterm-256color" TTY="/dev/tty3" COLUMNS="76" LINES="38"]
+]0;nico@Nico-Laptop: /mnt/c/Users/nicog/OneDrive/Desktop/KMPS/Praktikum5 Go[01;32mnico@Nico-Laptop[00m:[01;34m/mnt/c/Users/nicog/OneDrive/Desktop/KMPS/Praktikum5 Go[00m$ nod e client.js
+Client gestartet
+Bitte Client-ID eingeben: [s[2K[0GBitte Client-ID eingeben: c[28G[s[2K[0GBitte Client-ID eingeben: cl[29G[s[2K[0GBitte Client-ID eingeben: cli[30G[s[2K[0GBitte Client-ID eingeben: clie[31G[s[2K[0GBitte Client-ID eingeben: clien[32G[s[2K[0GBitte Client-ID eingeben: client[33G[s[2K[0GBitte Client-ID eingeben: client2[34G
+
+
+Client: clientclient2
+Keine Tickets
+[1G[0Jnumber Selbstzuw. q: Quit [27G
+
+[1G[0Jnumber Selbstzuw. q: Quit [27GTickets:
+ticket1 (nicht zugewiesen)
+[1G[0Jnumber Selbstzuw. q: Quit [27G
+
+Tickets:
+ticket1 (nicht zugewiesen)
+ticket2 (nicht zugewiesen)
+[1G[0Jnumber Selbstzuw. q: Quit [27G
+
+2
+[1G[0Jnumber Selbstzuw. q: Quit [27G
+
+Tickets:
+ticket1 (nicht zugewiesen)
+ticket2 (clientclient2)
+[1G[0Jnumber Selbstzuw. q: Quit [27G
+
+Tickets:
+ticket1 (clientclient3)
+ticket2 (clientclient2)
+[1G[0Jnumber Selbstzuw. q: Quit [27G
+
+Tickets:
+ticket1 (clientclient3)
+ticket2 (clientclient2)
+ticket3 (nicht zugewiesen)
+[1G[0Jnumber Selbstzuw. q: Quit [27G
+
+Socket Closed Connection:  CloseEvent {
+  target:
+   WebSocket {
+     _events:
+      [Object: null prototype] {
+        open: [36m[Function][39m,
+        close: [36m[Function][39m,
+        message: [36m[Function][39m,
+        error: [36m[Function][39m },
+     _eventsCount: [33m4[39m,
+     _maxListeners: [90mundefined[39m,
+     _binaryType: [32m'nodebuffer'[39m,
+     _closeCode: [33m1006[39m,
+     _closeFrameReceived: [33mfalse[39m,
+     _closeFrameSent: [33mfalse[39m,
+     _closeMessage: [32m''[39m,
+     _closeTimer: [1mnull[22m,
+     _extensions: {},
+     _protocol: [32m''[39m,
+     _readyState: [33m3[39m,
+     _receiver:
+      Receiver {
+        _writableState: [36m[WritableState][39m,
+        writable: [33mfalse[39m,
+        _events: [Object: null prototype] {},
+        _eventsCount: [33m0[39m,
+        _maxListeners: [90mundefined[39m,
+        _binaryType: [32m'nodebuffer'[39m,
+        _extensions: {},
+        _isServer: [33mfalse[39m,
+        _maxPayload: [33m104857600[39m,
+        _bufferedBytes: [33m0[39m,
+        _buffers: [],
+        _compressed: [33mfalse[39m,
+        _payloadLength: [33m82[39m,
+        _mask: [90mundefined[39m,
+        _fragmented: [33m0[39m,
+        _masked: [33mfalse[39m,
+        _fin: [33mtrue[39m,
+        _opcode: [33m1[39m,
+        _totalPayloadLength: [33m0[39m,
+        _messageLength: [33m0[39m,
+        _fragments: [],
+        _state: [33m0[39m,
+        _loop: [33mfalse[39m,
+        [[32mSymbol(websocket)[39m]: [36m[Circular][39m },
+     _sender:
+      Sender {
+        _extensions: {},
+        _socket: [36m[Socket][39m,
+        _firstFragment: [33mtrue[39m,
+        _compress: [33mfalse[39m,
+        _bufferedBytes: [33m0[39m,
+        _deflating: [33mfalse[39m,
+        _queue: [] },
+     _socket:
+      Socket {
+        connecting: [33mfalse[39m,
+        _hadError: [33mfalse[39m,
+        _handle: [1mnull[22m,
+        _parent: [1mnull[22m,
+        _host: [32m'localhost'[39m,
+        _readableState: [36m[ReadableState][39m,
+        readable: [33mfalse[39m,
+        _events: [36m[Object][39m,
+        _eventsCount: [33m3[39m,
+        _maxListeners: [90mundefined[39m,
+        _writableState: [36m[WritableState][39m,
+        writable: [33mfalse[39m,
+        allowHalfOpen: [33mfalse[39m,
+        _sockname: [1mnull[22m,
+        _pendingData: [1mnull[22m,
+        _pendingEncoding: [32m''[39m,
+        server: [1mnull[22m,
+        _server: [1mnull[22m,
+        parser: [1mnull[22m,
+        _httpMessage: [1mnull[22m,
+        timeout: [33m0[39m,
+        write: [36m[Function: writeAfterFIN][39m,
+        [[32mSymbol(asyncId)[39m]: [33m33[39m,
+        [[32mSymbol(lastWriteQueueSize)[39m]: [33m0[39m,
+        [[32mSymbol(timeout)[39m]: [1mnull[22m,
+        [[32mSymbol(kBytesRead)[39m]: [33m427[39m,
+        [[32mSymbol(kBytesWritten)[39m]: [33m321[39m,
+        [[32mSymbol(websocket)[39m]: [90mundefined[39m },
+     _bufferedAmount: [33m0[39m,
+     _isServer: [33mfalse[39m,
+     _redirects: [33m0[39m,
+     _url: [32m'ws://localhost:8080/ws'[39m,
+     _req: [1mnull[22m },
+  type: [32m'close'[39m,
+  wasClean: [33mfalse[39m,
+  reason: [32m''[39m,
+  code: [33m1006[39m }
+]0;nico@Nico-Laptop: /mnt/c/Users/nicog/OneDrive/Desktop/KMPS/Praktikum5 Go[01;32mnico@Nico-Laptop[00m:[01;34m/mnt/c/Users/nicog/OneDrive/Desktop/KMPS/Praktikum5 Go[00m$ clear
+[H[2J[3J]0;nico@Nico-Laptop: /mnt/c/Users/nicog/OneDrive/Desktop/KMPS/Praktikum5 Go[01;32mnico@Nico-Laptop[00m:[01;34m/mnt/c/Users/nicog/OneDrive/Desktop/KMPS/PraktikuScript started on 2021-01-24 11:16:54+01:00 [TERM="xterm-256color" TTY="/dev/pts/3" COLUMNS="50" LINES="38"]
+]0;nico@Nico-Laptop: /mnt/c/Users/nicog/OneDrive/Desktop/KMPS/Praktikum5 Go[01;32mnico@Nico-Laptop[00m:[01;34m/mnt/c/Users/nicog/OneDrive/Desktop/KMPS/Praktikum5 Go[00m$ node client2.l[K[K[K.js
+Client gestartet
+Bitte Client-ID eingeben: [s[2K[0GBitte Client-ID eingeben: 2[28G
+
+
+Client: client2
+Keine Tickets
+[1G[0Jnumber Selbstzuw. q: Quit [27G
+
+Tickets:
+ticket1 (nicht zugm5 Go[00m$ script -a client2.log
+Script started, file is client2.log
+]0;nico@Nico-Laptop: /mnt/c/Users/nicog/OneDrive/Desktop/KMPS/Praktikum5 Go[01;32mnico@Nico-Laptop[00m:[01;34m/mnt/c/Users/nicog/OneDrive/Desktop/KMPS/Praktikum5 Go[00m$ node client2.l[K[K[K.js
+Client gestartet
+Bitte Client-ID eingeben: [s[2K[0GBitte Client-ID eingeben: 2[28G
+
+
+Client: client2
+Keine Tickets
+[1G[0Jnumber Selbstzuw. q: Quit [27G
+
+Tickets:
+ticket1 (nicht zugewiesen)
+[1G[0Jnumber Selbstzuw. qewiesen)
+[1G[0Jnumber Selbstzuw. q: Quit [27G
+
+Tickets:
+ticket1 (nicht zugewiesen)
+ticket2 (nicht zugewiesen)
+[1G[0Jnumber Selbstzuw. q: Quit [27G
+
+2
+[1G[0Jnumber Selbstzuw. q: Quit [27G
+
+Tickets:
+ticket1 (nicht zugewiesen)
+ticket2 (client2)
+[1G[0Jnumber Selbstzuw. q: Quit [27G
+
+Tickets:
+ticket1 (client3)
+ticket2 (client2)
+[1G[0Jnumber Selbstzuw. q: Quit [27G
+
+Tickets:
+ticket1 (client3)
+ticket2 (client2)
+ticket3 (nicht zugewiesen)
+[1G[0Jnumber Selbstzuw. q: Quit [: Quit [27G
+
+Tickets:
+ticket1 (nicht zugewiesen)
+ticket2 (nicht zugewiesen)
+[1G[0Jnumber Selbstzuw. q: Quit [27G
+
+2
+[1G[0Jnumber Selbstzuw. q: Quit [27G
+
+Tickets:
+ticket1 (nicht zugewiesen)
+ticket2 (client2)
+[1G[0Jnumber Selbstzuw. q: Quit [27G
+
+Tickets:
+ticket1 (client3)
+ticket2 (client2)
+[1G[0Jnumber Selbstzuw. q: Quit [27G
+
+Tickets:
+ticket1 (client3)
+ticket2 (client2)
+ticket3 (nicht zugewiesen)
+[1G[0Jnumber Selbstzuw. q: Quit [27G
+
+q
+]0;nico@Nico-Laptop: /mnt27G
+
+q
+]0;nico@Nico-Laptop: /mnt/c/Users/nicog/OneDrive/Desktop/KMPS/Praktikum5 Go[01;32mnico@Nico-Laptop[00m:[01;34m/mnt/c/Users/nicog/OneDrive/Desktop/KMPS/Praktikum5 Go[00m$ exit
+exit
+
+Script done on 2021-01-24 11:17:47+01:00 [COMMAND_EXIT_CODE="0"]

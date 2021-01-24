@@ -1,0 +1,273 @@
+Script started on 2021-01-24 11:11:18+01:00 [TERM="xterm-256color" TTY="/dev/tty2" COLUMNS="120" LINES="30"]
+]0;nico@Nico-Laptop: /mnt/c/Users/nicog/OneDrive/Desktop/KMPS/Praktikum5 Go[01;32mnico@Nico-Laptop[00m:[01;34m/mnt/c/Users/nicog/OneDrive/Desktop/KMPS/Praktikum5 Go[00m$ go run *.go
+Server gestartet
+Keine Tickets
+n: neues Ticket q: Quit
+
+
+Neuer Client: client
+Keine Tickets
+n: neues Ticket q: Quit
+
+
+q
+exit status 1
+]0;nico@Nico-Laptop: /mnt/c/Users/nicog/OneDrive/Desktop/KMPS/Praktikum5 Go[01;32mnico@Nico-Laptop[00m:[01;34m/mnt/c/Users/nicog/OneDrive/Desktop/KMPS/Praktikum5 Go[00m$ clear
+[H[2J[3J]0;nico@Nico-Laptop: /mnt/c/Users/nicog/OneDrive/Desktop/KMPS/Praktikum5 Go[01;32mnico@Nico-Laptop[00m:[01;34m/mnt/c/Users/nicog/OneDrive/Desktop/KMPS/Praktikum5 Go[00m$ cleargo run *.go[6Pclear[3Plscd 'Eigene Dateien'ls[Kcleargo run *.go[6Pclear[Kscript -a server.log
+Script started, file is server.log
+]0Script started on 2021-01-24 11:12:54+01:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="120" LINES="30"]
+]0;nico@Nico-Laptop: /mnt/c/Users/nicog/OneDrive/Desktop/KMPS/Praktikum5 Go[01;32mnico@Nico-Laptop[00m:[01;34m/mnt/c/Users/nicog/OneDrive/Desktop/KMPS/Praktikum5 Go[00m$ go run *.go
+Server gestartet
+Keine Tickets
+n: neues Ticket q: Quit
+
+
+Neuer Client: clientclient1
+Keine Tickets
+n: neues Ticket q: Quit
+
+
+Neuer Client: clientclient2
+Keine Tickets
+n: neues Ticket q: Quit
+
+
+Neuer;nico@Nico-Laptop: /mnt/c/Users/nicog/OneDrive/Desktop/KMPS/Praktikum5 Go[01;32mnico@Nico-Laptop[00m:[01;34m/mnt/c/Users/nicog/OneDrive/Desktop/KMPS/Praktikum5 Go[00m$ go run *.go
+Server gestartet
+Keine Tickets
+n: neues Ticket q: Quit
+
+
+Neuer Client: clientclient1
+Keine Tickets
+n: neues Ticket q: Quit
+
+
+Neuer Client: clientclient2
+Keine Tickets
+n: neues Ticket q: Quit
+
+
+Neuer Client: clientclient3
+Keine Tickets
+n: neues Ticket q: Quit
+
+
+n
+Tickets:
+ticket1 (nicht zugewiesen)
+n: n Client: clientclient3
+Keine Tickets
+n: neues Ticket q: Quit
+
+
+n
+Tickets:
+ticket1 (nicht zugewiesen)
+n: neues Ticket q: Quit
+
+
+n
+Tickets:
+ticket1 (nicht zugewiesen)
+ticket2 (nicht zugewiesen)
+n: neues Ticket q: Quit
+
+
+Tickets:
+ticket1 (nicht zugewiesen)
+ticket2 (clientclient2)
+n: neues Ticket q: Quit
+
+
+Tickets:
+ticket1 (clientclient3)
+ticket2 (clientclient2)
+n: neues Ticket q: Quit
+
+
+n
+Tickets:
+ticket1 (clientclient3)
+ticket2 (clientclient2)
+ticket3 (nicht zugewiesen)
+n: neues Ticket q: Quit
+
+
+n
+Tickets:
+ticket1 (nicht zugewiesen)
+ticket2 (nicht zugewiesen)
+n: neues Ticket q: Quit
+
+
+Tickets:
+ticket1 (nicht zugewiesen)
+ticket2 (clientclient2)
+n: neues Ticket q: Quit
+
+
+Tickets:
+ticket1 (clientclient3)
+ticket2 (clientclient2)
+n: neues Ticket q: Quit
+
+
+n
+Tickets:
+ticket1 (clientclient3)
+ticket2 (clientclient2)
+ticket3 (nicht zugewiesen)
+n: neues Ticket q: Quit
+
+
+exit
+q
+exit status 1
+]0;nico@Nico-Laptop: /mnt/c/Users/nicog/OneDrive/Desktop/KMPS/Peues Ticket q: Quit
+
+
+exit
+q
+exit status 1
+]0;nico@Nico-Laptop: /mnt/c/Users/nicog/OneDrive/Desktop/KMPS/Praktikum5 Go[01;32mnico@Nico-Laptop[00m:[01;34m/mnt/c/Users/nicog/OneDrive/Desktop/KMPS/Praktikum5 Go[00m$ stop
+
+Command 'stop' not found, but there are 18 similar ones.
+
+]0;nico@Nico-Laptop: /mnt/c/Users/nicog/OneDrive/Desktop/KMPS/Praktikum5 Go[01;32mnico@Nico-Laptop[00m:[01;34m/mnt/c/Users/nicog/OneDrive/Desktop/KMPS/Praktikum5 Go[00m$ exit
+exit
+
+Script done on 2021-01-24 11:15:58+01:00 [COMMAND_EXIT_CODE="127"]
+raktikum5 Go[01;32mnico@Nico-Laptop[00m:[01;34m/mnt/c/Users/nicog/OneDrive/Desktop/KMPS/Praktikum5 Go[00m$ stop
+
+Command 'stop' not found, but there are 18 similar ones.
+
+]0;nico@Nico-Laptop: /mnt/c/Users/nicog/OneDrive/Desktop/KMPS/Praktikum5 Go[01;32mnico@Nico-Laptop[00m:[01;34m/mnt/c/Users/nicog/OneDrive/Desktop/KMPS/Praktikum5 Go[00m$ exit
+exit
+Script done, file is server.log
+]0;nico@Nico-Laptop: /mnt/c/Users/nicog/OneDrive/Desktop/KMPS/Praktikum5 Go[01;32mnico@Nico-Laptop[00m:[01;34m/mnt/c/Users/nicog/OneDrive/Desktop/KMPS/Praktikum5 Go[00m$ clear
+[H[2J[3J]0;nico@Nico-Laptop: /mnt/c/Users/nicog/OneDrive/Desktop/KMPS/Praktikum5 Go[01;32mnico@Nico-Laptop[00m:[01;34m/mnt/c/Users/nicog/OneDrive/Desktop/KMPS/Praktikum5 Go[00m$ sci[Kript -a server.log
+Script started, file is server.log
+]0;nico@Nico-Laptop: /mnt/c/Users/nicog/OneDrive/Desktop/KMPS/Praktikum5 Go[01;32mnico@Nico-Laptop[00m:[01;34m/mnt/c/Users/nicog/OneDrive/Desktop/KMPS/Praktikum5 Go[00m$ go *.[K[KrScript started on 2021-01-24 11:16:27+01:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="120" LINES="30"]
+]0;nico@Nico-Laptop: /mnt/c/Users/nicog/OneDrive/Desktop/KMPS/Praktikum5 Go[01;32mnico@Nico-Laptop[00m:[01;34m/mnt/c/Users/nicog/OneDrive/Desktop/KMPS/Praktikum5 Go[00m$ go *.[K[Krun *.go
+Server gestartet
+Keine Tickets
+n: neues Ticket q: Quit
+
+
+Neuer Client: client1
+Keine Tickets
+n: neues Ticket q: Quit
+
+
+Neuer Client: client2
+Keine Tickets
+n: neues Ticket q: Quit
+
+
+Neuer Cun *.go
+Server gestartet
+Keine Tickets
+n: neues Ticket q: Quit
+
+
+Neuer Client: client1
+Keine Tickets
+n: neues Ticket q: Quit
+
+
+Neuer Client: client2
+Keine Tickets
+n: neues Ticket q: Quit
+
+
+Neuer Client: client3
+Keine Tickets
+n: neues Ticket q: Quit
+
+
+n
+Tickets:
+ticket1 (nicht zugewiesen)
+n: neues Ticket q: Quit
+
+
+n
+Tickets:
+ticket1 (nicht zugewiesen)
+ticket2 (nicht zugewiesen)
+n: neues Ticket q: Quit
+
+
+Tickets:
+ticket1 (nicht zugewiesen)
+ticket2 (client2)
+n: neues Ticketlient: client3
+Keine Tickets
+n: neues Ticket q: Quit
+
+
+n
+Tickets:
+ticket1 (nicht zugewiesen)
+n: neues Ticket q: Quit
+
+
+n
+Tickets:
+ticket1 (nicht zugewiesen)
+ticket2 (nicht zugewiesen)
+n: neues Ticket q: Quit
+
+
+Tickets:
+ticket1 (nicht zugewiesen)
+ticket2 (client2)
+n: neues Ticket q: Quit
+
+
+Tickets:
+ticket1 (client3)
+ticket2 (client2)
+n: neues Ticket q: Quit
+
+
+n
+Tickets:
+ticket1 (client3)
+ticket2 (client2)
+ticket3 (nicht zugewiesen)
+n: neues Ticket q: Quit
+
+
+2021/01/24 11 q: Quit
+
+
+Tickets:
+ticket1 (client3)
+ticket2 (client2)
+n: neues Ticket q: Quit
+
+
+n
+Tickets:
+ticket1 (client3)
+ticket2 (client2)
+ticket3 (nicht zugewiesen)
+n: neues Ticket q: Quit
+
+
+2021/01/24 11:17:37 websocket: close 1006 (abnormal closure): unexpected EOF
+2021/01/24 11:17:39 websocket: close 1006 (abnormal closure): unexpected EOF
+2021/01/24 11:17:42 websocket: close 1006 (abnormal closure): unexpected EOF
+q
+exit status 1
+]0;nico@Nico-Laptop: /mnt/c/Users/nicog/OneDrive/Desktop/KMP:17:37 websocket: close 1006 (abnormal closure): unexpected EOF
+2021/01/24 11:17:39 websocket: close 1006 (abnormal closure): unexpected EOF
+2021/01/24 11:17:42 websocket: close 1006 (abnormal closure): unexpected EOF
+q
+exit status 1
+]0;nico@Nico-Laptop: /mnt/c/Users/nicog/OneDrive/Desktop/KMPS/Praktikum5 Go[01;32mnico@Nico-Laptop[00m:[01;34m/mnt/c/Users/nicog/OneDrive/Desktop/KMPS/Praktikum5 Go[00m$ ei[Kxit
+exit
+
+Script done on 2021-01-24 11:17:57+01:00 [COMMAND_EXIT_CODE="1"]

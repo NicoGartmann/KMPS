@@ -1,26 +1,20 @@
-#!/usr/bin/env python
-
-# WS client example
-
-import asyncio
+import asyncio 
 import websockets
 import json
 
-async def connect():
+async def client(): 
     uri = "ws://localhost:3000"
     async with websockets.connect(uri) as websocket:
-        name = input("Client gestartet.\nBitte Client-ID eingeben: ")
+        print("Client gestartet.")
+        username = input("Bitte Client-ID eingeben: ")
+        data = json.dumps({"username":username})
 
-        await websocket.send(name)
-        print(f"\nClient: {name}")
+        await websocket.send(data)
 
         tickets = await websocket.recv()
-        if len(tickets)>0:
-            for ticket in tickets:
-                print(json.dumps(ticket))
-        else: 
+        if len(tickets) > 0:
+            print(tickets)
+        else:
             print("Keine Tickets")
-
-
-asyncio.get_event_loop().run_until_complete(connect())
-asyncio.get_event_loop().run_forever()
+    
+    asyncio.get_event_loop().run_until_complete(client())
